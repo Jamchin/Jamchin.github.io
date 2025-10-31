@@ -1,25 +1,18 @@
- h1{
-    text-align: center;
- }
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap'); 
 
- .navbar ul{
-    list-style-type: none;
-    background-color: brown;
-    padding: 0px;
-    margin: 0px;
-    overflow: hidden;
- }
- .navbar a{
-    color: beige;
-    text-decoration: none;
-    padding: 15px;
-    display: block;
-    text-align: center;
- }
- .navbar a:hover{
-    background-color: darkred;
- }
+li,a,button{
+   font-family: sans-serif;
+   font-weight: 500;
+   font-size: 16px;
+   color: aliceblue;
+   text-decoration: none;
+}
 
- .navbar li{
-    float: left;
- }
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 10%;
+}
+
