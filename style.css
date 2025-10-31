@@ -26,6 +26,7 @@ li,a,button{
 
 
 header{
+   background-color: rrgb(126, 70, 52);
    display: flex;
    justify-content: space-between;
    align-items: center;
