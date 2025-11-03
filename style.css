@@ -24,16 +24,16 @@ li,a,button{ /* list, a tag, button tag styles */
 }
 
 header{
-   background-color: rrgb(126, 70, 52);
+   background-color: brown;
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 30px 10%;
+   box-shadow: 0px 0px 10px var(--clr-gray200);
 }
 
-.navbar{ /* making our Navigation bar class -> DONT Forget the '.'!!!*/
+.nav-links{ /* making our Navigation bar class -> DONT Forget the '.'!!!*/
    font-family: sans-serif;
-   display: flex;
-   
+   display: flex 0px 0px 10px; 
 }
 
