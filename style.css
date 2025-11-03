@@ -15,7 +15,7 @@
   letter-spacing: 2px; /* adds a little spacing between letters */
 }
 
-li,a,button{
+li,a,button{ /* list, a tag, button tag styles */
    font-family: sans-serif;
    font-weight: 500;
    font-size: 16px;
@@ -23,13 +23,17 @@ li,a,button{
    text-decoration: none;
 }
 
-
-
 header{
    background-color: rrgb(126, 70, 52);
    display: flex;
    justify-content: space-between;
    align-items: center;
    padding: 30px 10%;
+}
+
+.navbar{ /* making our Navigation bar class -> DONT Forget the '.'!!!*/
+   font-family: sans-serif;
+   display: flex;
+   
 }
 
