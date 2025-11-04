@@ -33,7 +33,31 @@ header{
 }
 
 .nav-links{ /* making our Navigation bar class -> DONT Forget the '.'!!!*/
-   font-family: sans-serif;
-   display: flex 0px 0px 10px; 
+   list-style: none;
 }
 
+.nav-links li{
+   display: inline-block;
+   padding: 0px 20px;
+}
+
+.nav-links li a{
+   transition: all 0.3s ease 0s;
+}
+
+.nav-links li a:hover{
+   color: darkred;
+}
+
+button{
+   padding: 9x 25px;
+   background-color: gray;
+   border: none;
+   border-radius: 50px;
+   cursor:pointer;
+   transition: all 0.3s ease 0s;
+}
+
+button:hover{
+   background-color: darkgray;
+}
