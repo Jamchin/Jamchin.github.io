@@ -15,6 +15,7 @@
 }
 
 .contactButton{
+  margin-left: auto; 
   padding: 10px 20px;
   background-color:beige;
   color: rgb(0, 0, 0);
