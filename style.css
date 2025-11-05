@@ -8,10 +8,12 @@
 }
 
 .welcome{
-   font-size: 10rem;        /* huge text, bigger than H1 */
+   font-family: sans-serif;
+   font-size: 6rem;        /* huge text, bigger than H1 */
    font-weight: bold;
    text-align: center;
    color:beige;
+   animation: drop 0.8s forwards;
 }
 
 .Logo {
@@ -37,7 +39,6 @@ header{
    justify-content: space-between;
    align-items: center;
    padding: 30px 10%;
-   box-shadow: 0px 0px 10px var(--clr-gray200);
 }
 
 .nav-links{ /* making our Navigation bar class -> DONT Forget the '.'!!!*/
@@ -58,7 +59,7 @@ header{
 }
 
 button{
-   padding: 15x 35px;
+   padding: 15px 35px;
    background-color: gray;
    border: none;
    border-radius: 50px;
@@ -68,4 +69,15 @@ button{
 
 button:hover{
    background-color: darkgray;
+}
+
+@keyframes drop {
+   0% {
+      transform: translateY(-20px); /* start slightly above */
+      opacity: 0;                    /* invisible */
+   }
+   100% {
+      transform: translateY(10px);  /* final position 10px down */
+      opacity: 1;                    /* fully visible */
+   }
 }
