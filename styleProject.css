@@ -1,15 +1,32 @@
 
 .TopNav{
+    text-decoration: none;
     font-family: sans-serif;
     background-color: brown;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     gap: 20px;
     margin-top: 30px;
     padding: 10px 400px;
     border-radius: 20px;
-    
+
 }
+
+.contactButton{
+  padding: 10px 20px;
+  background-color:beige;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+.contactButton:hover{
+  background-color:rgb(175, 157, 132);
+}
+
 
 .TopNav a{
     color: black;
