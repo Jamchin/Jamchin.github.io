@@ -60,6 +60,12 @@ header {
   font-size: 1.2rem;
 }
 
+.icon{
+   display: flex;
+   flex-direction: row;
+   gap: 2px;
+}
+
 .contacts a {
    color:beige; /* bright accent color */
    text-decoration: none;
