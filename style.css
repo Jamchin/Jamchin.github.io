@@ -7,8 +7,16 @@
    background-color: rgb(37, 36, 36);
 }
 
+.welcome{
+   font-size: 10rem;        /* huge text, bigger than H1 */
+   font-weight: bold;
+   text-align: center;
+   color:beige;
+}
+
 .Logo {
   color: #e6d6a7; /* a warm yellow tone */
+  background-color: brown;
   font-family: sans-serif;
   font-size: 2em; /* makes it larger than normal text */
   font-weight: bold;
@@ -50,7 +58,7 @@ header{
 }
 
 button{
-   padding: 9x 25px;
+   padding: 15x 35px;
    background-color: gray;
    border: none;
    border-radius: 50px;
