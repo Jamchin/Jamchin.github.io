@@ -30,11 +30,14 @@
 
 
 .TopNav a{
+    text-decoration: none;
     color: black;
     background-color: beige;
+    padding: 10px 20px;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
 .topNav a:hover{
-    color: black;
+    background-color:rgb(175, 157, 132);
 }
