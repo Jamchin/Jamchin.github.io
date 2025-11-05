@@ -44,6 +44,13 @@ header {
   border: 3px solid white;
 }
 
+.iconSet{
+   width: 15px;
+   height: 15px; 
+   object-fit: cover;
+ 
+}
+
 .Profile{
   display: flex;
   align-items: center;
