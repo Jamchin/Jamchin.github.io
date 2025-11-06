@@ -19,6 +19,10 @@ header{
     animation: drop 0.8s forwards;
 }
 
+.logo{
+   margin-right: auto; 
+}
+
 .contactButton{
   margin-left: auto; 
   padding: 10px 20px;
