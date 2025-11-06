@@ -125,10 +125,10 @@ header {
 #copyEmailBtn {
   display: none;
   margin-left: 8px;
-  padding: 5px 10px;
+  padding: 15px 25px;
   border: none;
   border-radius: 5px;
-  background-color: #444;
+  background-color: #373333;
   color: white;
   cursor: pointer;
   transition: opacity 0.2s ease;
