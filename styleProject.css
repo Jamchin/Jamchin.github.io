@@ -87,6 +87,14 @@ header{
   border-top-right-radius: 12px;
 }
 
+.Icon{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
