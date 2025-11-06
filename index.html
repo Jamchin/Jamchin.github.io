@@ -11,6 +11,7 @@
 </head>
 
 
+
 <body>
   <header>
  
@@ -24,9 +25,11 @@
           <img src="Insta-Icon.png" alt="Profile Picture" class="iconSet">
           <a href="https://instagram.com/Kirod245" target="_blank">Instagram</a>
         </div>
-        <div class = "Icon">
+        <div class = "Icon" id="emailContainer">
           <img src="emial-icon.png" alt="Profile Picture" class="iconSet">
           <a href="mailto:qin.ja@northeastern.edu">Email Me</a>
+          <button id="copyEmailBtn">Copy Email</button>
+          <p id="copyNotice" style="display:none; color: lightgreen;">Copied!</p>
         </div>
         
        
@@ -34,11 +37,13 @@
   </div>
     
    <nav class="nav-links">
-      <h4>James Qin's Portfolio</h4>
+      <h4 class = "Logo">James Qin's Portfolio</h4>
       <a href="projects.html">Projects</a>
       <a href="about.html">About Me</a>
    </nav>
 </header>
-
+<script src="copy.js"> </script>
 </body>
+
+
 

@@ -29,7 +29,7 @@ header {
 }
 
 .logo{
-   
+
 }
 
 .welcome{
@@ -120,6 +120,21 @@ header {
 .nav-links a:hover {
   background-color: #461e1e;
   color: white;
+}
+
+#copyEmailBtn {
+  display: none;
+  margin-left: 8px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+#copyEmailBtn:hover {
+  background-color: #666;
 }
 
 
