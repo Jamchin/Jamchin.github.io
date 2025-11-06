@@ -29,7 +29,7 @@ header {
 }
 
 .logo{
-
+   animation: SlideInRight 0.8s forwards;
 }
 
 .welcome{
@@ -116,11 +116,13 @@ header {
    border-radius: 20px;
    background-color: #994848;
    transition: all 0.3s ease;
+   animation: SlideInLeft 0.8s forwards;
 }
 
 .nav-links a:hover {
   background-color: #461e1e;
   color: white;
+  animation: drop 0.8s forwards;
 }
 
 #copyEmailBtn {
@@ -147,6 +149,27 @@ header {
    }
    100% {
       transform: translateY(10px);  /* final position 10px down */
+      opacity: 1;                    /* fully visible */
+   }
+}
+@keyframes SlideInLeft {
+   0% {
+      transform: translateX(-20px); /* start slightly above */
+      opacity: 0;                    /* invisible */
+   }
+   100% {
+      transform: translatex(10px);  /* final position 10px down */
+      opacity: 1;                    /* fully visible */
+   }
+}
+
+@keyframes SlideInRight {
+   0% {
+      transform: translateX(20px); /* start slightly above */
+      opacity: 0;                    /* invisible */
+   }
+   100% {
+      transform: translatex(-10px);  /* final position 10px down */
       opacity: 1;                    /* fully visible */
    }
 }
