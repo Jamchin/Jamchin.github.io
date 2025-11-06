@@ -157,7 +157,7 @@ header {
       opacity: 0;
    }
    100% {
-      transform: translatex(10px);  
+      transform: translatex(0px);  
       opacity: 1;
    }
 }
