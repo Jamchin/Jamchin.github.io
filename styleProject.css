@@ -69,6 +69,7 @@ header{
   justify-content: center;      /* center them horizontally */
   gap: 20px;                    /* spacing between items */
   padding: 30px;
+  text-decoration: none;
 }
 
 .project-card {
@@ -80,6 +81,7 @@ header{
   width: 250px;                 /* base card width */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
 .project-card img {
@@ -99,6 +101,7 @@ header{
     font-weight: 400;
     align-items: center;
     justify-content: center;
+    text-decoration:none;
 }
 
 .project-card:hover {
