@@ -1,0 +1,32 @@
+
+
+
+.HERO-VIDEO {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* adjust this */
+  overflow: hidden;
+}
+
+/* Video fills the container */
+.HERO-VIDEO video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* Text on top */
+.about-hero h1 {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  line-height: 60vh;
+}
