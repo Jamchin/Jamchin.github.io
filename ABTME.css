@@ -84,7 +84,7 @@ header{
 
 /* Text on top */
 .about-hero h1 {
-  position: relative;
+  position: absolute;
   z-index: 1;
   color: white;
   font-size: 4rem;
