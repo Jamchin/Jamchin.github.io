@@ -1,3 +1,25 @@
+
+.EXP{
+    text-decoration: none;
+    font-family: sans-serif;
+    background-color: brown;
+    color:beige;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.Exp-Icon{
+    text-decoration: none;
+    font-family: sans-serif;
+    color:beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+
 .TopNav{
     text-decoration: none;
     font-family: sans-serif;
