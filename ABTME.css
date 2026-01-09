@@ -38,6 +38,17 @@
     object-fit: fill;
 }
  
+.button{
+    width: 200px;
+    height: 200px; 
+    object-fit: fill;
+    background-color: beige;
+    color: black;
+    text-decoration: none;
+    font-family: sans-serif;
+    justify-content: space-between;
+    align-items: center;
+}
 
 .other{
     text-decoration: none;
@@ -49,8 +60,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    width: 200px;
-    height: 200px; 
     margin-top: 30px;
     padding: 10px 400px;
     border-radius: 20px;
