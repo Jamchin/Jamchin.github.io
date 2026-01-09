@@ -18,7 +18,15 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center; 
+    
 }
+.IMGCON{
+    width: 200px;
+    height: 200px; 
+    object-fit: fill;
+}
+ 
+
 
 .TopNav{
     text-decoration: none;
