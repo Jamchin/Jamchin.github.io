@@ -10,6 +10,16 @@
     align-items: center; 
 }
 
+.Experience{
+    text-decoration: none;
+    font-family: sans-serif;
+    color:beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; 
+}
+
 .Exp-Icon{
     text-decoration: none;
     font-family: sans-serif;
