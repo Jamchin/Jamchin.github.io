@@ -38,6 +38,7 @@ const SITE = {
     { date: "2025 — 2029", gap: "0rem", cards: [
       { title: "Northeastern University", subtitle: "Mechanical Engineering + Computer Science", detail: "Expected graduation · May 2029", icon: "", initials: "N", accent: "amber", width: "1fr", offset: "0rem" },
       { title: "NUROVER", subtitle: "Northeastern University Rover Team", detail: "University chapter", icon: "", initials: "NU", accent: "blue", width: "1fr", offset: "0rem" },
+      { title: "STEP UP Stem Instructor", subtitle: "Education Divide Reform ", detail: "Teacher in Step Up program", icon: "", initials: "NU", accent: "blue", width: "1fr", offset: "0rem" },
     ] },
   ],
 
