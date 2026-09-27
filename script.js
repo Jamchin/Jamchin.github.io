@@ -85,16 +85,19 @@ if (SITE.resumeSrc) {
 if (SITE.videoSrc) {
   const video = element("video");
   video.src = SITE.videoSrc;
-  video.controls = true;
-  video.playsInline = true;
-  video.preload = "metadata";
+  video.autoplay = true;
+  video.loop = true;
+  video.muted = true;       // Muting allows autoplay in most browsers.
+  video.playsInline = true; // Keeps playback inside the page on iPhones.
+  video.controls = false;
+  video.preload = "auto";
   if (SITE.videoPoster) video.poster = SITE.videoPoster;
   video.setAttribute("aria-label", "About James");
   const panel = document.querySelector("#about-video");
   panel.querySelector(".video-placeholder").remove();
   panel.prepend(video);
   // Move heading above native playback controls; video never autoplays audio.
-  panel.querySelector(".video-heading").style.bottom = "48px";
+  // panel.querySelector(".video-heading").style.bottom = "48px";
 }
 insertImage(document.querySelector("#portrait"), SITE.portraitSrc, "James Qin");
 document.querySelector("#about-text").textContent = SITE.aboutText;

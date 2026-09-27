@@ -8,7 +8,7 @@
 const SITE = {
   // MEDIA: place your files inside assets/, then enter their path below.
   resumeSrc: "assets/Resume(1.1).pdf",                  // Example: "assets/resume.pdf"
-  videoSrc: "",                   // Example: "assets/about-video.mp4"
+  videoSrc: "assets/ABOUTME.mp4",                   // Example: "assets/about-video.mp4"
   videoPoster: "",                // Optional: "assets/video-poster.jpg"
   portraitSrc: "assets/WebsitePic.jpg",                // Example: "assets/james.jpg"
   aboutText: "More about me soon.", // Replace with your own bio. Plain text.
