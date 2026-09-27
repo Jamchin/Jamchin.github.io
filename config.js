@@ -19,9 +19,9 @@ const SITE = {
   // accent may be "coral", "blue", or "amber" (defined in styles.css).
   projects: [
     { title: "HONG MK2", category: "ROBOTICS / PERSONAL PROJECT", description: "A robotic arm, built from the joints up.", image: "", imageAlt: "HONG MK2 robotic arm", url: " https://stirring-track-6b6.notion.site/Robotic-arm-39ae22ea196780c29c91f9834e21711a?pvs=143 ", accent: "coral" },
-    { title: "Rube Goldberg Machine", category: "ROBOTICS / TEAM PROJECT", description: "Building a house with a little bit of chaos.", image: "assets/RGB.png", imageAlt: "RGB Machine", url: " https://sites.google.com/view/rgm-group-h/home?pli=1&authuser=0", accent: "blue" },
+    { title: "Rube Goldberg Machine", category: "ROBOTICS / TEAM PROJECT", description: "Building a house with a little bit of chaos.", image: "assets/RGM.png", imageAlt: "RGM Machine", url: " https://sites.google.com/view/rgm-group-h/home?pli=1&authuser=0", accent: "blue" },
     { title: "Carnival Crane", category: "MECHATRONICS / TEAM PROJECT", description: "From an idea to an interactive game.", image: "assets/ClawMachine.png", imageAlt: "Carnival crane game", url: "https://sites.google.com/view/carnipals/overview ", accent: "amber" },
-    { title: "Electric Screwdriver", category: "MECHATRONICS/ PERSONAL Project", description: "To replace my normal screwdriver.", image: "assets/Screwdriver.png", imageAlt: "E-Screwdrvier", url: "https://stirring-track-6b6.notion.site/Electric-Screwdriver-2cee22ea196780238b17d3f0722a6db2?pvs=143", accent: "coral" },
+    { title: "Electric Screwdriver", category: "MECHATRONICS/ PERSONAL PROJECT", description: "To replace my normal screwdriver.", image: "assets/Screwdriver.png", imageAlt: "E-Screwdrvier", url: "https://stirring-track-6b6.notion.site/Electric-Screwdriver-2cee22ea196780238b17d3f0722a6db2?pvs=143", accent: "coral" },
     // COPY A BLOCK ABOVE HERE to add another card.
   ],
 
