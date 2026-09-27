@@ -10,7 +10,7 @@ const SITE = {
   resumeSrc: "assets/Resume(1.1).pdf",                  // Example: "assets/resume.pdf"
   videoSrc: "",                   // Example: "assets/about-video.mp4"
   videoPoster: "",                // Optional: "assets/video-poster.jpg"
-  portraitSrc: "",                // Example: "assets/james.jpg"
+  portraitSrc: "assets/WebsitePic.jpg",                // Example: "assets/james.jpg"
   aboutText: "More about me soon.", // Replace with your own bio. Plain text.
 
   // PROJECTS: reorder these blocks to reorder the cards.
