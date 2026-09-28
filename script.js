@@ -100,7 +100,7 @@ if (SITE.videoSrc) {
   // panel.querySelector(".video-heading").style.bottom = "48px";
 }
 insertImage(document.querySelector("#portrait"), SITE.portraitSrc, "James Qin");
-document.querySelector("#about-text").textContent = SITE.aboutText;
+//document.querySelector("#about-text").textContent = SITE.aboutText;
 
 // 05 / CONTACT — fill blank links in config.js to turn them into live links.
 // Inline SVG icons inherit the button's text color and stay sharp at any size.

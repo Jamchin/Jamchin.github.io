@@ -7,7 +7,7 @@
    ============================================================================ */
 const SITE = {
   // MEDIA: place your files inside assets/, then enter their path below.
-  resumeSrc: "assets/Resume(1.1).pdf",                  // Example: "assets/resume.pdf"
+  resumeSrc: "assets/Resume(1.2).pdf",                  // Example: "assets/resume.pdf"
   videoSrc: "assets/ABOUTME.mp4",                   // Example: "assets/about-video.mp4"
   videoPoster: "",                // Optional: "assets/video-poster.jpg"
   portraitSrc: "assets/WebsitePic.jpg",                // Example: "assets/james.jpg"
@@ -36,9 +36,9 @@ const SITE = {
       { title: "VEX Robotics", subtitle: "High school", detail: "2021–2025", icon: "", initials: "VX", accent: "coral", width: "1fr", offset: "0rem" },
     ] },
     { date: "2025 — 2029", gap: "0rem", cards: [
-      { title: "Northeastern University", subtitle: "Mechanical Engineering + Computer Science", detail: "Expected graduation · May 2029", icon: "", initials: "N", accent: "amber", width: "1fr", offset: "0rem" },
+      { title: "Northeastern University", subtitle: "Mechanical Engineering + Computer Science", detail: "Expected graduation · May 2029", icon: "assets/NUICON", initials: "N", accent: "amber", width: "1fr", offset: "0rem" },
       { title: "NUROVER", subtitle: "Northeastern University Rover Team", detail: "University chapter", icon: "", initials: "NU", accent: "blue", width: "1fr", offset: "0rem" },
-      { title: "STEP UP Stem Instructor", subtitle: "Education Divide Reform ", detail: "Teacher in Step Up program", icon: "", initials: "NU", accent: "blue", width: "1fr", offset: "0rem" },
+      { title: "STEP UP Stem Instructor", subtitle: "Education Divide Reform ", detail: "Summer 2026", icon: "", initials: "EDR", accent: "blue", width: "1fr", offset: "0rem" },
     ] },
   ],
 
