@@ -16,7 +16,7 @@ function photo(src, alt) {
   const img = element("img");
   img.src = src;
   img.alt = alt;
-  img.loading = "lazy";
+  //img.loading = "lazy";
   return img;
 }
 // Missing image files fall back to their placeholder instead of a broken icon.
