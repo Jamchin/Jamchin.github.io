@@ -18,6 +18,15 @@ const SITE = {
   // Blank URL disables navigation. No fake links, popups, or page jumps.
   // accent may be "coral", "blue", or "amber" (defined in styles.css).
   projects: [
+    {
+      title: "Three-Axis Planar Manipulator",
+      category: "ROBOTICS / SCHOOL PROJECT / IN PROGRESS",
+      description: "Picking and placing a sphere between three fixed obstacles.",
+      image: "assets/robotics-dropoff.png",
+      imageAlt: "Isometric view of the three-link arm in its drop-off pose",
+      url: "robotics-final.html",
+      accent: "coral"
+    },
     { title: "HONG MK2(IN PROGRESS)", category: "ROBOTICS / PERSONAL PROJECT", description: "A robotic arm, built from the joints up.", image: "assets/HMK2.png", imageAlt: "HONG MK2 robotic arm", url: " https://stirring-track-6b6.notion.site/Robotic-arm-39ae22ea196780c29c91f9834e21711a?pvs=143 ", accent: "coral" },
     { title: "HONG MK1", category: "ROBOTICS / PERSONAL PROJECT/ FINISHED", description: "Version 1 of the robotic arm!", image: "assets/HMK1.png", imageAlt: "HONG MK1 robotic arm", url: "https://stirring-track-6b6.notion.site/V1-Robotic-Arm-3c9e22ea196780d38880dfa74419b0a4?pvs=143 ", accent: "lime" },
     { title: "Rube Goldberg Machine", category: "ROBOTICS / TEAM PROJECT/ FINISHED", description: "Building a house with a little bit of chaos.", image: "assets/RGM.png", imageAlt: "RGM Machine", url: " https://sites.google.com/view/rgm-group-h/home?pli=1&authuser=0", accent: "blue" },

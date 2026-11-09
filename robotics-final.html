@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Three-Axis Planar Manipulator | James Qin</title>
+  <link rel="icon" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .project { width: min(calc(100% - 40px), 960px); margin: 0 auto; padding: 36px 0 60px; }
+    .project header { margin: clamp(40px, 8vw, 88px) 0 28px; }
+    .meta, .project footer { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 22px; }
+    .meta { color: var(--muted); font: 12px/1.5 ui-monospace, monospace; }
+    .tag { padding: 4px 12px; border: 1px solid var(--coral); border-radius: 20px; color: var(--coral); }
+    .project h1 { max-width: 16ch; margin: 20px 0; font-size: clamp(44px, 7vw, 88px); letter-spacing: -.055em; }
+    .software, .project section p, figcaption { color: var(--muted); }
+    .software strong { color: var(--white); margin-right: 12px; }
+    .cad { min-height: clamp(190px, 30vw, 340px); background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+    .project section { padding: 36px 0; border-bottom: 1px solid var(--line); }
+    .project h2 { margin-bottom: 16px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -.04em; }
+    .project section p { max-width: 72ch; margin-top: 12px; }
+    .project figure { margin: 24px 0 0; }
+    .project figure img { width: 100%; height: auto; border-radius: var(--radius); }
+    figcaption { margin-top: 8px; font-size: 14px; }
+    .project footer { padding-top: 28px; }
+    .project footer .button { margin-right: auto; }
+    .resource-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    .resource-links a { display: inline-flex; gap: 10px; align-items: center; padding: 8px 16px; border: 1px solid var(--line); border-radius: 9px; }
+    .resource-links a:hover { color: var(--coral); border-color: currentColor; }
+    .resource-links svg { width: 20px; height: 20px; }
+    .project pre { overflow-x: auto; background: var(--panel); padding: 16px 20px; border-left: 2px solid var(--coral); border-radius: 4px; font-size: .9rem; }
+    .project h3 { margin-top: 24px; font-size: 1.1rem; }
+    .poses { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 16px; }
+    .project .poses img { aspect-ratio: 4 / 3; object-fit: contain; background: white; }
+  </style>
+</head>
+<body>
+  <main class="project">
+    <a class="text-link" href="index.html#projects">← All projects</a>
+    <header>
+      <p class="meta"><span class="tag">School project</span> ME 3460 · In progress</p>
+      <h1>Three-Axis Planar Manipulator</h1>
+      <p class="software"><strong>Software</strong> Onshape · MATLAB · Simscape Multibody</p>
+    </header>
+
+    <!-- Insert the interactive CAD embed inside this panel when ready. -->
+    <div class="cad" id="cad-viewer" role="region" aria-label="Interactive CAD preview area"></div>
+
+    <nav class="resource-links" aria-label="Project resources">
+      <a href="https://github.com/Jamchin/RobotDynamics-Control-Final/tree/main">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.5 7.5 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        GitHub
+      </a>
+      <a href="https://cad.onshape.com/documents/3f0c614e95d5998eefd3c62a/w/379213342045eb8faec6dba9/e/d1a249ecc88cc6da7ccaa9d8">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5v10l-9 5-9-5V7z M3 7l9 5 9-5 M12 12v10"/></svg>
+        Onshape
+      </a>
+    </nav>
+
+    <section id="overview">
+      <h2>Design and reach</h2>
+      <p>I designed a three-link planar arm to move a 10 cm sphere between three fixed obstacles. The links measure 80, 50, and 15 cm. At pickup and drop-off, the last link has to point straight down so the arm can reach into the gaps.</p>
+      <h3>Checking reach</h3>
+      <p>In <code>CoverTaskSpaces.m</code>, I swept the shoulder and elbow angles and plotted the arm at each step. These lines from the drop-off sweep adjust the wrist so the three angles always add up to −90°.</p>
+      <pre><code>q2 = q2 -2.479;
+q3 = -90 - q2-q1;</code></pre>
+
+      <h3>Solving the two poses</h3>
+      <p>In <code>CalcQ.m</code>, I set the tip target to (52.5, 5) cm for pickup or (82.5, 5) cm for drop-off. Working back from the tip gives the wrist position. From there, the law of cosines gives the triangle angles needed to set the shoulder and elbow.</p>
+      <pre><code>q1 = alpha + beta;
+q2 = theta2 - 180;
+q3 = angle_of_attack - q1 - q2;</code></pre>
+      <p>I applied each set of angles to the assembly in Simscape. In both front views, the last link points down into the gap between obstacles.</p>
+      <div class="poses">
+        <figure>
+          <img src="assets/robotics-pickup.png" width="777" height="619" loading="lazy" alt="Arm tip pointing down between the first and second obstacles">
+          <figcaption>Figure 6 · Pickup at x = 52.5 cm</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/robotics-dropoff-front.png" width="352" height="249" loading="lazy" alt="Arm extended to the right with its tip between the second and third obstacles">
+          <figcaption>Figure 7 · Drop-off at x = 82.5 cm</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="simscape">
+      <h2>Simscape wiring</h2>
+      <p>The model splits at the table. The upper branch places the three obstacle boxes using rigid transforms. The lower branch attaches the arm base to the table and connects the shoulder, elbow, and wrist joints through the three links.</p>
+      <p>Each joint receives its own constant angle through a Simulink-PS Converter. Changing those three inputs switches the assembly between the calculated pickup and drop-off poses.</p>
+      <figure>
+        <a href="assets/robotics-wiring.png" aria-label="Open full-size Simscape wiring diagram">
+          <img src="assets/robotics-wiring.png" width="1384" height="529" loading="lazy" alt="Simscape model with three fixed obstacle blocks above the shoulder, elbow, and wrist joint chain">
+        </a>
+        <figcaption>Simscape Multibody model · Select the diagram to view it at full size.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Add the third section's heading and content here. -->
+    <section id="next-phase" aria-label="Future project section"></section>
+
+    <footer aria-label="Project navigation">
+      <a class="button primary" href="index.html#projects">← Back to projects</a>
+      <a class="text-link" href="https://stirring-track-6b6.notion.site/V1-Robotic-Arm-3c9e22ea196780d38880dfa74419b0a4?pvs=143">HONG MK1 ↗</a>
+      <a class="text-link" href="hong-mk2.html">HONG MK2 →</a>
+    </footer>
+  </main>
+</body>
+</html>
