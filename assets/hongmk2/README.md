@@ -8,7 +8,7 @@ For example, after adding `elbow-assembly.png`, set the `assembly` entry to:
 src: "assets/hongmk2/elbow-assembly.png",
 ```
 
-Slots: hero, assembly, bevel, planetary, tubes, wrist, sketch, build.
+See the media entries in hong-mk2-config.js for the current slot names.
 Blank paths preserve the placeholders. Use exact capitalization in filenames.
 Images (PNG/JPG/WebP/SVG/GIF) and videos (MP4/WebM) are supported.
 Videos have playback controls and do not autoplay. Set `poster` for a video preview image.

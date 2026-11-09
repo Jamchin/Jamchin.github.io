@@ -1,0 +1,123 @@
+.project {
+  width: min(calc(100% - 40px), 960px);
+  margin: 0 auto;
+  padding: 36px 0 60px;
+}
+.project header {
+  margin: clamp(40px, 8vw, 88px) 0 28px;
+}
+.meta,
+.project footer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+.meta {
+  color: var(--muted);
+  font:
+    12px/1.5 ui-monospace,
+    monospace;
+}
+.tag {
+  padding: 4px 12px;
+  border: 1px solid var(--coral);
+  border-radius: 20px;
+  color: var(--coral);
+}
+.project h1 {
+  max-width: 16ch;
+  margin: 20px 0;
+  font-size: clamp(44px, 7vw, 88px);
+  letter-spacing: -0.055em;
+}
+.software,
+.project section p,
+figcaption {
+  color: var(--muted);
+}
+.software strong {
+  color: var(--white);
+  margin-right: 12px;
+}
+.cad {
+  min-height: clamp(190px, 30vw, 340px);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.project section {
+  padding: 36px 0;
+  border-bottom: 1px solid var(--line);
+}
+.project h2 {
+  margin-bottom: 16px;
+  font-size: clamp(28px, 4vw, 42px);
+  letter-spacing: -0.04em;
+}
+.project section p {
+  max-width: 72ch;
+  margin-top: 12px;
+}
+.project figure {
+  margin: 24px 0 0;
+}
+.project figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+figcaption {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.project footer {
+  padding-top: 28px;
+}
+.project footer .button {
+  margin-right: auto;
+}
+.resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.resource-links a {
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+}
+.resource-links a:hover {
+  color: var(--coral);
+  border-color: currentColor;
+}
+.resource-links svg {
+  width: 20px;
+  height: 20px;
+}
+.project pre {
+  overflow-x: auto;
+  background: var(--panel);
+  padding: 16px 20px;
+  border-left: 2px solid var(--coral);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+.project h3 {
+  margin-top: 24px;
+  font-size: 1.1rem;
+}
+.poses {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 16px;
+}
+.project .poses img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: white;
+}

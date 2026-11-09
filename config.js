@@ -7,31 +7,77 @@
    ============================================================================ */
 const SITE = {
   // MEDIA: place your files inside assets/, then enter their path below.
-  resumeSrc: "assets/Resume(1.2).pdf",                  // Example: "assets/resume.pdf"
-  videoSrc: "assets/ABOUTME.mp4",                   // Example: "assets/about-video.mp4"
-  videoPoster: "",                // Optional: "assets/video-poster.jpg"
-  portraitSrc: "assets/WebsitePic.jpg",                // Example: "assets/james.jpg"
-  aboutText: "More about me soon.", // Replace with your own bio. Plain text.
+  resumeSrc: "assets/Resume(1.2).pdf", // Example: "assets/resume.pdf"
+  videoSrc: "assets/ABOUTME.mp4", // Example: "assets/about-video.mp4"
+  videoPoster: "", // Optional: "assets/video-poster.jpg"
+  portraitSrc: "assets/WebsitePic.jpg", // Example: "assets/james.jpg"
 
   // PROJECTS: reorder these blocks to reorder the cards.
-  // image = real project photo; url = full https:// Notion page link.
+  // group controls the homepage filter: personal, professional, school, or club.
+  // image is the card photo. url can be a local HTML file or an external link.
   // Blank URL disables navigation. No fake links, popups, or page jumps.
-  // accent may be "coral", "blue", or "amber" (defined in styles.css).
+  // accent may be "coral", "blue", "lime", or "amber" (defined in styles.css).
   projects: [
     {
       title: "Three-Axis Planar Manipulator",
+      group: "school",
       category: "ROBOTICS / SCHOOL PROJECT / IN PROGRESS",
       description: "Picking and placing a sphere between three fixed obstacles.",
       image: "assets/robotics-dropoff.png",
       imageAlt: "Isometric view of the three-link arm in its drop-off pose",
       url: "robotics-final.html",
-      accent: "coral"
+      accent: "coral",
     },
-    { title: "HONG MK2(IN PROGRESS)", category: "ROBOTICS / PERSONAL PROJECT", description: "A robotic arm, built from the joints up.", image: "assets/HMK2.png", imageAlt: "HONG MK2 robotic arm", url: " https://stirring-track-6b6.notion.site/Robotic-arm-39ae22ea196780c29c91f9834e21711a?pvs=143 ", accent: "coral" },
-    { title: "HONG MK1", category: "ROBOTICS / PERSONAL PROJECT/ FINISHED", description: "Version 1 of the robotic arm!", image: "assets/HMK1.png", imageAlt: "HONG MK1 robotic arm", url: "https://stirring-track-6b6.notion.site/V1-Robotic-Arm-3c9e22ea196780d38880dfa74419b0a4?pvs=143 ", accent: "lime" },
-    { title: "Rube Goldberg Machine", category: "ROBOTICS / TEAM PROJECT/ FINISHED", description: "Building a house with a little bit of chaos.", image: "assets/RGM.png", imageAlt: "RGM Machine", url: " https://sites.google.com/view/rgm-group-h/home?pli=1&authuser=0", accent: "blue" },
-    { title: "Carnival Crane", category: "MECHATRONICS / TEAM PROJECT/ FINISHED", description: "From an idea to an interactive game.", image: "assets/ClawMachine.png", imageAlt: "Carnival crane game", url: "https://stirring-track-6b6.notion.site/Claw-Machine-2d5e22ea196780629303ed867653f1d7?pvs=143", accent: "amber" },
-    { title: "Electric Screwdriver", category: "MECHATRONICS/ PERSONAL PROJECT/ FINISHED", description: "To replace my normal screwdriver.", image: "assets/Screwdriver.png", imageAlt: "E-Screwdrvier", url: "https://stirring-track-6b6.notion.site/Electric-Screwdriver-2cee22ea196780238b17d3f0722a6db2?pvs=143", accent: "coral" },
+    {
+      title: "HONG MK2(IN PROGRESS)",
+      group: "personal",
+      category: "ROBOTICS / PERSONAL PROJECT",
+      description: "A robotic arm, built from the joints up.",
+      image: "assets/HMK2.png",
+      imageAlt: "HONG MK2 robotic arm",
+      url: "https://stirring-track-6b6.notion.site/Robotic-arm-39ae22ea196780c29c91f9834e21711a?pvs=143",
+      accent: "coral",
+    },
+    {
+      title: "HONG MK1",
+      group: "personal",
+      category: "ROBOTICS / PERSONAL PROJECT/ FINISHED",
+      description: "Version 1 of the robotic arm!",
+      image: "assets/HMK1.png",
+      imageAlt: "HONG MK1 robotic arm",
+      url: "https://stirring-track-6b6.notion.site/V1-Robotic-Arm-3c9e22ea196780d38880dfa74419b0a4?pvs=143",
+      accent: "lime",
+    },
+    {
+      title: "Rube Goldberg Machine",
+      group: "school",
+      category: "ROBOTICS / TEAM PROJECT/ FINISHED",
+      description: "Building a house with a little bit of chaos.",
+      image: "assets/RGM.png",
+      imageAlt: "RGM Machine",
+      url: "https://sites.google.com/view/rgm-group-h/home?pli=1&authuser=0",
+      accent: "blue",
+    },
+    {
+      title: "Carnival Crane",
+      group: "school",
+      category: "MECHATRONICS / TEAM PROJECT/ FINISHED",
+      description: "From an idea to an interactive game.",
+      image: "assets/ClawMachine.png",
+      imageAlt: "Carnival crane game",
+      url: "https://stirring-track-6b6.notion.site/Claw-Machine-2d5e22ea196780629303ed867653f1d7?pvs=143",
+      accent: "amber",
+    },
+    {
+      title: "Electric Screwdriver",
+      group: "personal",
+      category: "MECHATRONICS/ PERSONAL PROJECT/ FINISHED",
+      description: "To replace my normal screwdriver.",
+      image: "assets/Screwdriver.png",
+      imageAlt: "E-Screwdrvier",
+      url: "https://stirring-track-6b6.notion.site/Electric-Screwdriver-2cee22ea196780238b17d3f0722a6db2?pvs=143",
+      accent: "coral",
+    },
     // COPY A BLOCK ABOVE HERE to add another card.
   ],
 
@@ -42,14 +88,58 @@ const SITE = {
   // width = CSS grid column width; "1fr" means equal share of available space.
   // offset = vertical position within the row, desktop only ("0rem" by default).
   timeline: [
-    { date: "2021 — 2025", gap: "4rem", cards: [
-      { title: "VEX Robotics", subtitle: "High school", detail: "2021–2025", icon: "", initials: "VX", accent: "coral", width: "1fr", offset: "0rem" },
-    ] },
-    { date: "2025 — 2029", gap: "0rem", cards: [
-      { title: "Northeastern University", subtitle: "Mechanical Engineering + Computer Science", detail: "Expected graduation · May 2029", icon: "assets/NUICON", initials: "N", accent: "amber", width: "1fr", offset: "0rem" },
-      { title: "NUROVER", subtitle: "Northeastern University Rover Team", detail: "University chapter", icon: "", initials: "NU", accent: "blue", width: "1fr", offset: "0rem" },
-      { title: "STEP UP Stem Instructor", subtitle: "Education Divide Reform ", detail: "Summer 2026", icon: "", initials: "EDR", accent: "blue", width: "1fr", offset: "0rem" },
-    ] },
+    {
+      date: "2021 — 2025",
+      gap: "4rem",
+      cards: [
+        {
+          title: "VEX Robotics",
+          subtitle: "High school",
+          detail: "2021–2025",
+          icon: "",
+          initials: "VX",
+          accent: "coral",
+          width: "1fr",
+          offset: "0rem",
+        },
+      ],
+    },
+    {
+      date: "2025 — 2029",
+      gap: "0rem",
+      cards: [
+        {
+          title: "Northeastern University",
+          subtitle: "Mechanical Engineering + Computer Science",
+          detail: "Expected graduation · May 2029",
+          icon: "assets/NUICON.png",
+          initials: "N",
+          accent: "amber",
+          width: "1fr",
+          offset: "0rem",
+        },
+        {
+          title: "NUROVER",
+          subtitle: "Northeastern University Rover Team",
+          detail: "University chapter",
+          icon: "",
+          initials: "NU",
+          accent: "blue",
+          width: "1fr",
+          offset: "0rem",
+        },
+        {
+          title: "STEP UP Stem Instructor",
+          subtitle: "Education Divide Reform ",
+          detail: "Summer 2026",
+          icon: "",
+          initials: "EDR",
+          accent: "blue",
+          width: "1fr",
+          offset: "0rem",
+        },
+      ],
+    },
   ],
 
   // CONTACT: enter mailto:you@example.com for email, https://... for websites.
